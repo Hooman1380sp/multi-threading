@@ -166,3 +166,36 @@ from threading import Thread, active_count, current_thread, enumerate
 # t1 = Timer(interval=10, function=show, args=("blue",))
 #
 # t1.start()
+
+# ----------------
+# Event
+
+# from threading import Event, Thread
+#
+#
+# def one_show(one, tow):
+#     sleep(9)
+#     print("one_show ready")
+#     one.set()
+#     tow.wait()
+#     print("one_show is finishing")
+#     one.clear()
+#
+#
+# def tow_show(one, tow):
+#     print("tow_show ready")
+#     tow.set()
+#     one.wait()
+#     print("tow_show is finishing")
+#     tow.clear()
+#
+#
+# one = Event()
+# tow = Event()
+#
+# t1 = Thread(target=one_show, args=(one, tow))
+# t2 = Thread(target=tow_show, args=(one, tow))
+#
+# t1.start()
+# t2.start()
+
